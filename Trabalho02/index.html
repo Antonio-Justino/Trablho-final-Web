@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de cachorros e donos</h1>
+    </header>
+
+    <button id="botaoAdicionar" onclick="abrirpopup()">+</button>
+
+    
+    <div id="popupOverlay" style="display: none;"></div>
+    <div id="popup">
+        <h2 id="popupTitle">Adicionar Novo Cachorro</h2>
+        <label for="novoCachorro">Nome do Cachorro:</label>
+        <input type="text" id="novoCachorro">
+
+        <label for="novoDono">Nome do Dono:</label>
+        <input type="text" id="novoDono">
+        
+        <label for="novoEmail">Email:</label>
+        <input type="email" id="novoEmail">
+        
+        <label for="novoTelefone">Telefone:</label>
+        <input type="text" id="novoTelefone">
+        
+        <label for="novoLink">Link da Imagem:</label>
+        <input type="text" id="novoLink">
+
+        <button onclick="salvarcachorro()" class="salvar">Salvar</button>
+        <button onclick="fecharpopup()" id="fechar_popup" class="fechar">Fechar</button>
+        
+        <button onclick="excluirLinha()" class="excluir" style="display: none;">Excluir</button>
+    </div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Imagem</td>
+                <td>Cachorro</td>
+                <td>Dono</td>
+                <td>Telefone</td>
+                <td>Email</td>
+                <td>Ações</td>
+            </tr>
+        </thead>
+        <tbody id="api">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
